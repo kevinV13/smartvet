@@ -1,0 +1,74 @@
+<h3 class="fw-bold">Lista de Historias Clinicas ⚕️</h3>
+
+<div class="text-end">
+  <button mat-raised-button color="primary" routerLink="/admin/HistoriaClinica/new">
+    Nueva Historia Clinica ➕
+  </button>
+</div>
+
+<div class="example-header">
+  <mat-form-field>
+    <input
+      matInput
+      (keyup)="applyFilter($event.target.value)"
+      placeholder="Buscar historia Clinica"
+    />
+  </mat-form-field>
+</div>
+
+<div>
+  <table
+    mat-table
+    [dataSource]="dataSource"
+    matSort
+    class="mat-elevation-z8"
+    class="w-100"
+  >
+    <ng-container matColumnDef="idHistoriaClinica">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+      <td mat-cell *matCellDef="let element">{{ element.idHistoriaClinica }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="numeroFicha">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>N° Ficha</th>
+      <td mat-cell *matCellDef="let element">{{ element.numeroFicha }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="observacion">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Observacion</th>
+      <td mat-cell *matCellDef="let element">{{ element.observacion }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="diagnostico">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Diagnostico</th>
+        <td mat-cell *matCellDef="let element">{{ element.diagnostico }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="tratamiento">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Tratamiento</th>
+        <td mat-cell *matCellDef="let element">{{ element.tratamiento }}</td>
+      </ng-container>
+
+     
+
+
+    <ng-container matColumnDef="acciones">
+      <th mat-header-cell *matHeaderCellDef>Acciones</th>
+      <td mat-cell *matCellDef="let element">
+        <button
+          mat-button
+          color="primary"
+          [routerLink]="[element.idHistoriaClinica, 'editar']"
+        >
+          <mat-icon>ballot</mat-icon>
+        </button>
+        <button mat-button color="primary" (click)="eliminar(element.idHistoriaClinica)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>
