@@ -6,17 +6,28 @@
           [formGroup]="form"
           #frmLibro="ngForm"
         >
+            
             <mat-form-field appearance="outline" class="d-block">
-                <mat-label>ID del Cliente</mat-label>
-                <input 
-                  matInput
-                  type="number"
-                  placeholder="ID del Cliente"
-                  formControlName="cliente"
-                />
-                <mat-error *ngIf="form.controls.cliente.hasError('required')">
-                    Este Campo es obligatorio
-                </mat-error>
+              <mat-label>Cliente</mat-label>
+              <input 
+                matInput
+                type="text"
+                placeholder="Cliente"
+                [matAutocomplete]="autoCliente"
+                [formControl]="myControlCliente"
+                formControlName="cliente"
+              />
+              <mat-autocomplete 
+                #autoCliente="matAutocomplete" 
+                [displayWith]="mostrarCliente"
+              >
+                <mat-option *ngFor="let c of clientesFiltrados$ | async" [value]="c" >
+                  {{ c.nombreCliente }}
+                </mat-option>
+              </mat-autocomplete>
+              <mat-error *ngIf="form.controls.cliente.hasError('required')">
+                Este Campo es obligatorio
+              </mat-error>
             </mat-form-field>
 
             <mat-form-field appearance="outline" class="d-block">
@@ -30,10 +41,10 @@
                 <mat-error *ngIf="form.controls.nombre.hasError('required')">
                     Este Campo es obligatorio
                 </mat-error>
-                <mat-error *ngIf="form.controls.nombre.hasError('minLength')">
+                <mat-error *ngIf="form.controls.nombre.hasError('minlength')">
                     Debe tener al menos 4 caracteres
                 </mat-error>
-                <mat-error *ngIf="form.controls.nombre.hasError('maxLength')">
+                <mat-error *ngIf="form.controls.nombre.hasError('maxlength')">
                     Debe tener 70 caracteres como maximo
                 </mat-error>
             </mat-form-field>
@@ -67,8 +78,8 @@
             <mat-form-field appearance="outline" class="d-block">
                 <mat-label>Sexo</mat-label>
                 <mat-select formControlName="sexo">
-                  <mat-option value="one">Macho</mat-option>
-                  <mat-option value="two">Hembra</mat-option>
+                  <mat-option value="Macho">Macho</mat-option>
+                  <mat-option value="Hembra">Hembra</mat-option>
                 </mat-select>
                 <mat-error *ngIf="form.controls.sexo.hasError('required')">
                     Este Campo es obligatorio

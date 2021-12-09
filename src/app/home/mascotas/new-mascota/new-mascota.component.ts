@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Mascota } from '../shared/mascota.model';
 import { MascotaService } from '../shared/mascota.service';
 
 @Component({
@@ -9,17 +8,19 @@ import { MascotaService } from '../shared/mascota.service';
   styleUrls: ['./new-mascota.component.css']
 })
 export class NewMascotaComponent implements OnInit {
-  
   constructor(public mascotaService: MascotaService, private router:Router) { }
 
   ngOnInit(): void {}
 
-  createMascota(mascota: Mascota) {
+  createMascota(mascota: any) {
     this.mascotaService.create(mascota).subscribe(
-      () => {
+      (res) => {
+        console.log(res);
         this.router.navigate(['mascotas']);
       },
-      (error: any) => {}
+      (err) => {
+        console.log(err);
+      }
     );
   }
 }

@@ -8,4 +8,5 @@ export class Mascota{
     sexo: string;
     edad: string;
     cliente: Cliente;
+   
 }

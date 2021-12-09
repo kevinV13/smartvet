@@ -21,7 +21,7 @@ export class MascotaListComponent implements OnInit {
   
   getAllMascotas(){
     this.mascotaService.getAllMascotas().subscribe((data:any)=>{
-          this.dataSource=new MatTableDataSource(data);
+          this.dataSource=new MatTableDataSource(data['body']);
         });
   }
 
