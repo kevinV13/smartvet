@@ -9,6 +9,10 @@ import { LayoutComponent } from './layout/layout.component';
 import { MaterialModule } from '../material/material.module';
 import { FormHistoriaclinicaComponent } from './historiasclinicas/shared/form-historiaclinica/form-historiaclinica.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CitaListComponent } from './citas/cita-list/cita-list.component';
+import { EditCitaComponent } from './citas/edit-cita/edit-cita.component';
+import { NewCitaComponent } from './citas/new-cita/new-cita.component';
+import { FormCitaComponent } from './citas/shared/form-cita/form-cita.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +21,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     NewHistoriaclinicaComponent,
     EditHistoriaclinicaComponent,
     FormHistoriaclinicaComponent,
+    CitaListComponent,
+    EditCitaComponent,
+    NewCitaComponent,
+    FormCitaComponent,
   ],
   imports: [
     CommonModule,

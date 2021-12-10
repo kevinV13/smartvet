@@ -10,7 +10,7 @@ import { CitaService } from '../shared/cita.service';
 })
 export class CitaListComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'fechahora','motivo', 'idmascota','acciones'];
+  displayedColumns: string[] = ['id', 'fechahora','motivo', 'idMascota','acciones'];
   dataSource: MatTableDataSource<Citas>;
 
   constructor(private citaService: CitaService) {}
@@ -21,7 +21,7 @@ export class CitaListComponent implements OnInit {
 
   getAllCitas() {
     this.citaService.getAllCitas().subscribe((data: any) => {
-      this.dataSource = new MatTableDataSource(data);
+      this.dataSource = new MatTableDataSource(data['body']);
     });
   }
 
