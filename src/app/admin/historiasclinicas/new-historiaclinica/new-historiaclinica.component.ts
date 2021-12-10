@@ -7,18 +7,23 @@ import { HistoriaclinicaService } from '../shared/historiaclinica.service';
   selector: 'app-new-historiaclinica',
   templateUrl: './new-historiaclinica.component.html',
   styleUrls: ['./new-historiaclinica.component.css']
+  
+  
 })
 export class NewHistoriaclinicaComponent implements OnInit {
   constructor(public historiaclinicaService: HistoriaclinicaService, private router: Router) {}
 
   ngOnInit(): void {}
 
-  createHistoriaclinica(historiaclinica: HistoriaClinica) {
+  createHistoriaclinica(historiaclinica: any) {
     this.historiaclinicaService.create(historiaclinica).subscribe(
-      () => {
-        this.router.navigate(['admin/HistoriaClinica']);
+      (res) => {
+        console.log(res);
+        this.router.navigate(['/admin/HistoriaClinica']);
       },
-      (error: any) => {}
+      (err) => {
+        console.log(err);
+      }
     );
   }
 }

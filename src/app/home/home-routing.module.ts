@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { IndexComponent } from "./index/IndexComponent";
+import { IndexComponent } from "./index/Index.component";
 import { LayoutComponent } from './layout/layout.component';
 import { EditMascotaComponent } from './mascotas/edit-mascota/edit-mascota.component';
 import { MascotaListComponent } from './mascotas/mascota-list/mascota-list.component';
@@ -30,6 +30,7 @@ const routes: Routes = [
     ],
   },
 ];
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

@@ -10,7 +10,7 @@ import { HistoriaclinicaService } from '../../historiasclinicas/shared/historiac
 })
 export class HistoriaclinicaListComponent implements OnInit {
 
-  displayedColumns: string[] = ['idHistoriaClinica', 'numeroFicha','observacion', 'diagnostico', 'tratamiento','acciones'];
+  displayedColumns: string[] = ['idHistoriaClinica', 'numeroFicha','observacion', 'diagnostico', 'tratamiento','idMascota','nombre','acciones'];
   dataSource: MatTableDataSource<HistoriaClinica>;
 
   constructor(private historiaclinicaService: HistoriaclinicaService) {}
@@ -21,7 +21,7 @@ export class HistoriaclinicaListComponent implements OnInit {
 
   getAllHistoriaClinica() {
     this.historiaclinicaService.getAllHistoriaClinica().subscribe((data: any) => {
-      this.dataSource = new MatTableDataSource(data);
+      this.dataSource = new MatTableDataSource(data['body']);
     });
   }
 

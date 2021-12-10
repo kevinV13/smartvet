@@ -56,4 +56,27 @@
     100%{
         transform: translateY(10px);
     }
+
+	
 }
+.link-btn {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: none;
+	cursor:pointer;
+	overflow: hidden;
+	outline:none;
+	font-size: 0.8em;
+	padding: 0px;
+  }
+  
+  .link-btn:hover {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: none;
+	cursor:pointer;
+	overflow: hidden;
+	outline:none;
+	font-size: 0.8em;
+	padding: 0px;
+  }

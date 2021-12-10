@@ -8,6 +8,7 @@ import { EditHistoriaclinicaComponent } from './historiasclinicas/edit-historiac
 import { LayoutComponent } from './layout/layout.component';
 import { MaterialModule } from '../material/material.module';
 import { FormHistoriaclinicaComponent } from './historiasclinicas/shared/form-historiaclinica/form-historiaclinica.component';
+import { FormEditHistoriaclinicaComponent } from './historiasclinicas/shared/form-historiaclinica/form-edit-historiaclinica.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     NewHistoriaclinicaComponent,
     EditHistoriaclinicaComponent,
     FormHistoriaclinicaComponent,
+    FormEditHistoriaclinicaComponent,
   ],
   imports: [
     CommonModule,

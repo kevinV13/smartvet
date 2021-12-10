@@ -26,3 +26,13 @@ body {
 .example-card {
   max-width: 400px;
 }
+body {
+  background:linear-gradient(rgba(19, 90, 138, 0.1),rgba(5, 57, 134, 0.1)), url('./assets/adult-g39ad5b1ee_1920.jpg');
+  /*background-image: url('./assets/adult-g39ad5b1ee_1920.jpg');*/
+  background-repeat: no-repeat,;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+
+
+}
