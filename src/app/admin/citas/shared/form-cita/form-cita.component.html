@@ -40,14 +40,27 @@
         </mat-form-field>
         <!-- --------------------------------------------------------------------------------- -->
 
-       <mat-form-field appearance="outline" class="d-block">
-          <mat-label>idmascota</mat-label>
-          <input
+        <mat-form-field appearance="outline" class="d-block">
+          <mat-label>Mascota</mat-label>
+          <input 
             matInput
-            type="number"
-            placeholder="idmascota"
-            formControlName="idmascota"
+            type="text"
+            placeholder="Mascota"
+            [matAutocomplete]="autoMascota"
+            [formControl]="myControlMascota"
+            formControlName="idMascota"
           />
+          <mat-autocomplete 
+            #autoMascota="matAutocomplete" 
+            [displayWith]="mostrarMascota"
+          >
+            <mat-option *ngFor="let c of mascotaFiltrados$ | async" [value]="c" >
+              {{ c.nombre }}
+            </mat-option>
+          </mat-autocomplete>
+          <mat-error *ngIf="form.controls.idMascota.hasError('required')">
+            Este Campo es obligatorio
+          </mat-error>
         </mat-form-field>
         
 

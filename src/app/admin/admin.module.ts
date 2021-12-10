@@ -10,6 +10,10 @@ import { MaterialModule } from '../material/material.module';
 import { FormHistoriaclinicaComponent } from './historiasclinicas/shared/form-historiaclinica/form-historiaclinica.component';
 import { FormEditHistoriaclinicaComponent } from './historiasclinicas/shared/form-historiaclinica/form-edit-historiaclinica.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CitaListComponent } from './citas/cita-list/cita-list.component';
+import { EditCitaComponent } from './citas/edit-cita/edit-cita.component';
+import { NewCitaComponent } from './citas/new-cita/new-cita.component';
+import { FormCitaComponent } from './citas/shared/form-cita/form-cita.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     NewHistoriaclinicaComponent,
     EditHistoriaclinicaComponent,
     FormHistoriaclinicaComponent,
+<<<<<<< HEAD
     FormEditHistoriaclinicaComponent,
+=======
+    CitaListComponent,
+    EditCitaComponent,
+    NewCitaComponent,
+    FormCitaComponent,
+>>>>>>> e56c1fbffd9b0e4c7075d1fa8f7a03cc9a957800
   ],
   imports: [
     CommonModule,
