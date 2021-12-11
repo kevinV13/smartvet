@@ -16,7 +16,7 @@ export class NewCitaComponent implements OnInit {
   createCita(cita: Citas) {
     this.citaService.create(cita).subscribe(
       () => {
-        this.router.navigate(['admin/Citas']);
+        this.router.navigate(['admin/citas']);
       },
       (error: any) => {}
     );

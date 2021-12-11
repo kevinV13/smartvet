@@ -65,8 +65,8 @@ export class FormCitaComponent implements OnInit {
 
     save(){
       let cita = new Citas();
-      this.mascota=this.form.value['idMascota']
-      cita.idMascota=this.mascota;
+      //this.mascota=this.form.value['idMascota']
+      cita.idMascota=this.form.value['idMascota']
       cita.fechahora=this.form.value['fechahora']
       cita.motivo=this.form.value['motivo']
       console.log(cita);

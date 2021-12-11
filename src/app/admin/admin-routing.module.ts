@@ -4,14 +4,12 @@ import { LayoutComponent } from './layout/layout.component';
 import { EditHistoriaclinicaComponent } from './historiasclinicas/edit-historiaclinica/edit-historiaclinica.component';
 import { NewHistoriaclinicaComponent } from './historiasclinicas/new-historiaclinica/new-historiaclinica.component';
 import { HistoriaclinicaListComponent } from './historiasclinicas/historiaclinica-list/historiaclinica-list.component';
-<<<<<<< HEAD
-import { FormEditHistoriaclinicaComponent } from './historiasclinicas/shared/form-historiaclinica/form-edit-historiaclinica.component';
-=======
+
+//import { FormEditHistoriaclinicaComponent } from './historiasclinicas/shared/form-historiaclinica/form-edit-historiaclinica.component';
 import { EditCitaComponent } from './citas/edit-cita/edit-cita.component';
 import { NewCitaComponent } from './citas/new-cita/new-cita.component';
 import { CitaListComponent } from './citas/cita-list/cita-list.component';
 
->>>>>>> e56c1fbffd9b0e4c7075d1fa8f7a03cc9a957800
 const routes: Routes = [
   {
     path: '',
@@ -25,20 +23,24 @@ const routes: Routes = [
         path: 'HistoriaClinica/new',
         component: NewHistoriaclinicaComponent,
       },
+      /*{
+        path: 'HistoriaClinica/:id/editar',
+        component: EditHistoriaclinicaComponent,
+      },*/
       {
         path: 'HistoriaClinica/:id/editar',
         component: EditHistoriaclinicaComponent,
       },
       {
-        path: 'Citas',
+        path: 'citas',
         component: CitaListComponent,
       },
       {
-        path: 'Citas/new',
+        path: 'citas/new',
         component: NewCitaComponent,
       },
       {
-        path: 'Citas/:id/editar',
+        path: 'citas/:id/editar',
         component: EditCitaComponent,
       },
     ],
