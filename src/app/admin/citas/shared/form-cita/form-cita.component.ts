@@ -49,7 +49,7 @@ export class FormCitaComponent implements OnInit {
     }
       
     filtrarMascotas(val: any){
-      if (val != null && val.idcliente>0){
+      if (val != null && val.idMascota>0){
         return this.mascotas.filter((el) =>
             el.nombre.toLowerCase().includes(val.nombre.toLowerCase())
         );
@@ -63,6 +63,7 @@ export class FormCitaComponent implements OnInit {
       return val ? `${val.nombre}` : val;
     }
 
+
     save(){
       let cita = new Citas();
       //this.mascota=this.form.value['idMascota']
@@ -72,5 +73,6 @@ export class FormCitaComponent implements OnInit {
       console.log(cita);
       this.onSave.emit(cita);
     }
+
   }
 

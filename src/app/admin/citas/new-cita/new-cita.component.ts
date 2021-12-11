@@ -9,16 +9,20 @@ import { CitaService } from '../shared/cita.service';
   styleUrls: ['./new-cita.component.css']
 })
 export class NewCitaComponent implements OnInit {
-  constructor(public citaService: CitaService, private router: Router) {}
+
+constructor(public citaService: CitaService, private router: Router) {}
 
   ngOnInit(): void {}
 
-  createCita(cita: Citas) {
+  createCita(cita: any) {
     this.citaService.create(cita).subscribe(
-      () => {
-        this.router.navigate(['admin/citas']);
+      (res) => {
+        console.log(res);
+        this.router.navigate(['/admin/Citas']);
       },
-      (error: any) => {}
+      (err) => {
+        console.log(err);
+      }
     );
   }
 }

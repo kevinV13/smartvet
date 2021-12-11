@@ -21,7 +21,7 @@ export class CitaListComponent implements OnInit {
 
   getAllCitas() {
     this.citaService.getAllCitas().subscribe((data: any) => {
-      this.dataSource = new MatTableDataSource(data);
+      this.dataSource = new MatTableDataSource(data['body']);
     });
   }
 

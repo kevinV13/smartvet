@@ -17,7 +17,7 @@ export class CitaService {
   }
 
   get(id: number) {
-    return this.http.get(`${this.apiBase}/citas/${id}`);
+    return this.http.get<Citas>(`${this.apiBase}/citas/${id}`);
   }
 
   create(cita: Citas) {
