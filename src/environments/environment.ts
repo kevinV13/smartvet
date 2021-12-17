@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBase: 'http://localhost:8080/api/v1',
+  apiBase: 'https://smarvet-app-api.herokuapp.com/api/v1',
 };
 
 /*

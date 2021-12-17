@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { IndexComponent } from "./index/Index.component";
+import { IndexComponent } from './index/index.component';
 import { LayoutComponent } from './layout/layout.component';
 import { EditMascotaComponent } from './mascotas/edit-mascota/edit-mascota.component';
 import { MascotaListComponent } from './mascotas/mascota-list/mascota-list.component';
@@ -20,11 +20,11 @@ const routes: Routes = [
         component: MascotaListComponent,
       },
       {
-        path:'mascota/new',
+        path:'mascotas/new',
         component: NewMascotaComponent,
       },
       {
-        path:'mascota/:id/edit',
+        path:'mascotas/:id/edit',
         component: EditMascotaComponent,
       },
     ],

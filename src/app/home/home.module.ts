@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { LayoutComponent } from './layout/layout.component';
-import { IndexComponent } from "./index/Index.component";
+import { IndexComponent } from './index/index.component';
 import { MaterialModule } from '../material/material.module';
 import { MascotaListComponent } from './mascotas/mascota-list/mascota-list.component';
 import { NewMascotaComponent } from './mascotas/new-mascota/new-mascota.component';
