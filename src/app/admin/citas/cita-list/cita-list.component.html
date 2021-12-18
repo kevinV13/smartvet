@@ -31,7 +31,7 @@
 
     <ng-container matColumnDef="fechahora">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Fecha Hora</th>
-      <td mat-cell *matCellDef="let element">{{ element.fechaHora }}</td>
+      <td mat-cell *matCellDef="let element">{{ element.fechaHora | date:'dd/MM/yyyy,  h:mm a'}}</td>
     </ng-container>
 
     <ng-container matColumnDef="motivo">

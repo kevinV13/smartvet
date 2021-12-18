@@ -10,7 +10,7 @@ import { MascotaService } from '../shared/mascota.service';
 })
 export class MascotaListComponent implements OnInit {
 
-  displayedColumns: string[] = ['idMascota', 'nombre', 'especie', 'raza','sexo','edad','cliente','acciones'];
+  displayedColumns: string[] = ['idMascota', 'nombre', 'especie', 'raza','sexo','edad','idcliente','cliente','acciones'];
   dataSource : MatTableDataSource<Mascota>;
 
   constructor(private mascotaService:MascotaService) { }
