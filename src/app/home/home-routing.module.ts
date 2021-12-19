@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ClienteListComponent } from './clientes/cliente-list/cliente-list.component';
+import { EditClienteComponent } from './clientes/edit-cliente/edit-cliente.component';
+import { NewClienteComponent } from './clientes/new-cliente/new-cliente.component';
 import { IndexComponent } from './index/index.component';
 import { LayoutComponent } from './layout/layout.component';
 import { EditMascotaComponent } from './mascotas/edit-mascota/edit-mascota.component';
@@ -26,6 +29,18 @@ const routes: Routes = [
       {
         path:'mascotas/:id/edit',
         component: EditMascotaComponent,
+      },
+      {
+        path:'clientes',
+        component: ClienteListComponent,
+      },
+      {
+        path:'clientes/new',
+        component: NewClienteComponent,
+      },
+      {
+        path:'clientes/:id/edit',
+        component: EditClienteComponent,
       },
     ],
   },
